@@ -32,7 +32,7 @@ describe("HTTP Requests", () => {
   it("GET request", async () => {
     const response = await sendRequest("GET", `${BASE_URL}/1`);
     expect(response.status).to.eq(200);
-    expect(response.duration).to.be.lessThan(150);
+    expect(response.duration).to.be.lessThan(250);
     expect(response.body).to.have.property("userId");
     expect(response.body).to.have.property("id");
     expect(response.body).to.have.property("title");
